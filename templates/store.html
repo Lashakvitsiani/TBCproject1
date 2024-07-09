@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+Echostream-Store
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container mt-4">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <img src="/static/images/{{ product['img'] }}" class="card-img-top" alt="AM">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product['name'] }}</h5>
+                    <p class="card-text">{{ product['price'] }}</p>
+                    <a href="/Albums.html" class="btn btn-primary">View </a>
+                    <a href="https://www.amazon.com/hz/wishlist/ls/21KXM3A0OMV8U?ref_=wl_share" class="btn btn-primary"
+                       target="_blank">Purchase </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
